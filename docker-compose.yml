@@ -1,17 +1,21 @@
 version: '3'
 services:
-  app:
+  npm:
     image: 'jc21/nginx-proxy-manager:latest'
+    container_name: ngnxpm
     restart: unless-stopped
     ports:
       - '80:80'
       - '81:81'
       - '443:443'
+    environment:
+      DISABLE_IPV6: 'true'
+    networks:
+      - proxy
     volumes:
       - ~/config/ngnxpm/data:/data
       - ~/config/ngnxpm/letsencrypt:/etc/letsencrypt
 networks:
-  default:
-    external:
-      name: proxy
+  proxy:
+
 
