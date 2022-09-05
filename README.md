@@ -1,6 +1,7 @@
 # alpha-server
+
 Reverse proxy server
 
-docker network create ngnxpm-network
+  docker network create proxy
 
-docker-compose up -d
+  docker-compose up -d
