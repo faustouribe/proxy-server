@@ -2,7 +2,7 @@
 source local
 docker run \
   --name=cloudflare-ddns \
-  -e API_KEY=$cloudlareapi \
+  -e API_KEY=$cloudflareapi \
   -e ZONE=$domain \
   -e SUBDOMAIN=$subdomain \
   --restart unless-stopped \
