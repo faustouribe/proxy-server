@@ -1,3 +1,5 @@
+#!/bin/bash -x
+source local
 docker run \
   --name=cloudflare-ddns \
   -e API_KEY=xxxxxxx \
